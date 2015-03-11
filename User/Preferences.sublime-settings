@@ -1,0 +1,22 @@
+{
+	"animation_enabled": false,
+	"bold_folder_labels": false,
+	"color_scheme": "Packages/Base16 Color Schemes/base16-tomorrow.dark.tmTheme",
+	"draw_indent_guides": false,
+	"font_face": "Menlo",
+	"font_size": 14,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"preview_on_click": true,
+	"save_on_focus_lost": true,
+	"show_full_path": true,
+	"soda_classic_tabs": false,
+	"soda_folder_icons": false,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": false
+}

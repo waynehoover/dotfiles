@@ -1,0 +1,19 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Base16 Color Schemes",
+		"Better CoffeeScript",
+		"Emmet",
+		"GitGutter",
+		"Markdown Preview",
+		"Package Control",
+		"SCSS",
+		"SideBarEnhancements",
+		"SublimeGit",
+		"Theme - Soda",
+		"Theme - Spacegray"
+	]
+}
