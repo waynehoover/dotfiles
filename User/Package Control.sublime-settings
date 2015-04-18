@@ -4,16 +4,25 @@
 	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
+		"All Autocomplete",
 		"Base16 Color Schemes",
 		"Better CoffeeScript",
-		"Emmet",
+		"DashDoc",
+		"DocBlockr",
+		"Dockerfile Syntax Highlighting",
+		"Elixir",
 		"GitGutter",
-		"Markdown Preview",
+		"GitSavvy",
 		"Package Control",
-		"SCSS",
+		"Ruby Slim",
+		"Sass",
 		"SideBarEnhancements",
-		"SublimeGit",
-		"Theme - Soda",
-		"Theme - Spacegray"
+		"SublimeLinter",
+		"SublimeLinter-contrib-elixirc",
+		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"Theme - Afterglow"
 	]
 }

@@ -1,22 +1,23 @@
 {
 	"animation_enabled": false,
-	"bold_folder_labels": false,
-	"color_scheme": "Packages/Base16 Color Schemes/base16-tomorrow.dark.tmTheme",
-	"draw_indent_guides": false,
+	"auto_complete": true,
+	"auto_complete_commit_on_tab": true,
+	"color_scheme": "Packages/User/SublimeLinter/base16-default.dark (SL).tmTheme",
+	"copy_with_empty_selection": true,
+	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Menlo",
-	"font_size": 14,
-	"highlight_modified_tabs": true,
+	"font_size": 15,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"preview_on_click": true,
+	"index_files": true,
+	"margin": 2,
 	"save_on_focus_lost": true,
-	"show_full_path": true,
-	"soda_classic_tabs": false,
-	"soda_folder_icons": false,
+	"scroll_speed": 1.5,
 	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
+	"tabs_small": true,
+	"theme": "Afterglow-green.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": false
 }
