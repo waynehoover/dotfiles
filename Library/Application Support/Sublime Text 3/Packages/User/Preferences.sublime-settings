@@ -19,5 +19,7 @@
 	"tabs_small": true,
 	"theme": "Afterglow-green.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"tree_animation_enabled": false
+	"tree_animation_enabled": false,
+	"ensure_newline_at_eof_on_save": true,
+	"auto_match_enabled": true
 }
