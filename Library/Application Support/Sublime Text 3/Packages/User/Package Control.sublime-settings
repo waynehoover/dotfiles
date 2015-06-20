@@ -6,6 +6,7 @@
 	[
 		"AdvancedNewFile",
 		"All Autocomplete",
+		"Babel",
 		"Base16 Color Schemes",
 		"Better CoffeeScript",
 		"DashDoc",
@@ -14,15 +15,19 @@
 		"Elixir",
 		"GitGutter",
 		"GitSavvy",
+		"Markdown Preview",
+		"Material Theme",
 		"Package Control",
 		"Ruby Slim",
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-coffee",
 		"SublimeLinter-contrib-elixirc",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
 		"SublimeLinter-ruby",
+		"Table Editor",
 		"Theme - Afterglow"
 	]
 }
