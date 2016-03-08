@@ -1,5 +1,4 @@
 {
-	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": true,
@@ -30,5 +29,6 @@
 	"tabs_small": true,
 	"theme": "Afterglow-green.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"tree_animation_enabled": false
+	"tree_animation_enabled": false,
+	"trim_trailing_white_space_on_save": true
 }
