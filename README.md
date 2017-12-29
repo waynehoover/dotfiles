@@ -1,6 +1,7 @@
 # dotfiles
 
 Some good things to have:
-```brew tap caskroom/fonts
+```bash
+brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 ```
