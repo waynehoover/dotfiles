@@ -2,4 +2,5 @@
 
 Some good things to have:
 ```brew tap caskroom/fonts
-brew cask install font-hack-nerd-font```
+brew cask install font-hack-nerd-font
+```
