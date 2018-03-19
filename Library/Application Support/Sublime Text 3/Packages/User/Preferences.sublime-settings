@@ -10,22 +10,23 @@
 	"caret_extra_bottom": 1,
 	"caret_extra_top": 1,
 	"caret_extra_width": 1,
-	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-tomorrow-night.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/base16-tomorrow-night (SL).tmTheme",
 	"copy_with_empty_selection": true,
 	"ensure_newline_at_eof_on_save": true,
+	"expand_sidebar_on_startup": true,
 	"fade_fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		"_buld/",
 		"node_modules/"
 	],
-	"font_face": "Hack",
+	"font_face": "Operator Mono Book",
 	"font_options":
 	[
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 13,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"SublimeLinter-contrib-elixirc",
