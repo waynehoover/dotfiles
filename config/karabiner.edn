@@ -1,0 +1,32 @@
+; {:profiles
+;  {:WPH {:default true
+;          :sim     50
+;          :delay   500
+;          :alone   1000
+;          :held    500}}
+;  :templates {:alfred "osascript -e 'tell application \"Alfred 3\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+;              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"}
+;  :simlayers {:semicolon-mode {:key :semicolon}
+;              :d-mode {:key :d}
+;  :main [
+;         {:des "d-mode"
+;          :rules [:d-mode
+;                  [:j :left_arrow]
+;                  [:k :down_arrow]
+;                  [:i :up_arrow]
+;                  [:l :right_arrow]
+;                 ]}
+;          ]}
+
+
+; ; OR
+
+; ;  :main [
+; ;         {:des "d-mode"
+; ;          :rules [[:d ["d-mode" 1] nil {:afterup ["d-mode" 0] :alone :d}]
+; ;                  [:j :left_arrow ["d-mode" 1]]
+; ;                  [:k :down_arrow ["d-mode" 1]]
+; ;                  [:i :up_arrow ["d-mode" 1]]
+; ;                  [:l :right_arrow ["d-mode" 1]]
+; ;                 ]}
+; ;          ]}
