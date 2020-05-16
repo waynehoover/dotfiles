@@ -32,6 +32,7 @@ cask 'timing'
 cask 'transmission'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'zoomus'
 cask 'whatsapp'
 cask 'xmind'
 
