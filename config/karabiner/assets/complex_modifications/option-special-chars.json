@@ -1,8 +1,8 @@
 {
-  "title": "Option special chars (Dvorak IULM layout)",
+  "title": "Option special chars (Dvorak IU layout)",
   "rules": [
     {
-      "description": "Change Option E to {",
+      "description": "Change Option E to ?",
       "manipulators": [
         {
           "type": "basic",
@@ -16,7 +16,7 @@
           },
           "to": [
             {
-              "key_code": "hyphen",
+              "key_code": "open_bracket",
               "modifiers": "left_shift"
             }
           ]
@@ -24,12 +24,12 @@
       ]
     },
     {
-      "description": "Change Option R to }",
+      "description": "Change Option S to +",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "r",
+            "key_code": "s",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -38,7 +38,7 @@
           },
           "to": [
             {
-              "key_code": "equal_sign",
+              "key_code": "close_bracket",
               "modifiers": "left_shift"
             }
           ]
@@ -46,28 +46,7 @@
       ]
     },
     {
-      "description": "Change Option D to [",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "d",
-            "modifiers": {
-              "mandatory": [
-                "option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "hyphen"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Change Option F to ]",
+      "description": "Change Option F to =",
       "manipulators": [
         {
           "type": "basic",
@@ -81,19 +60,19 @@
           },
           "to": [
             {
-              "key_code": "equal_sign"
+              "key_code": "close_bracket"
             }
           ]
         }
       ]
     },
     {
-      "description": "Change Option C to (",
+      "description": "Change Option D to /",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "c",
+            "key_code": "d",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -102,20 +81,19 @@
           },
           "to": [
             {
-              "key_code": "9",
-              "modifiers": "left_shift"
+              "key_code": "open_bracket"
             }
           ]
         }
       ]
     },
     {
-      "description": "Change Option V to )",
+      "description": "Change Option ` (tilde) to Esc",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "v",
+            "key_code": "grave_accent_and_tilde",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -124,8 +102,7 @@
           },
           "to": [
             {
-              "key_code": "0",
-              "modifiers": "left_shift"
+              "key_code": "escape"
             }
           ]
         }
