@@ -66,6 +66,8 @@ brew 'chruby'
 brew 'ruby-install'
 brew 'apply-user-defaults'
 brew 'stow'
+brew 'zsh-history-substring-search'
+brew 'zsh-syntax-highlighting'
 
 brew 'cfssl'
 

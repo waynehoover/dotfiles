@@ -4,7 +4,7 @@ eval "$(~/.cargo/bin/zoxide init zsh)"
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-source .exports
+source ~/.exports
 
 export PATH=~/.cargo/bin:/usr/local/opt/python/libexec/bin:~/go/bin:~/net/dev-bootstrap/bin:$PATH
 export GOPATH=~/go
@@ -32,3 +32,9 @@ setopt INTERACTIVECOMMENTS
 
 # Don't beep when auto-completing.
 unsetopt LIST_BEEP
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
