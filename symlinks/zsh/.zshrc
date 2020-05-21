@@ -10,6 +10,7 @@ export PATH=~/.cargo/bin:/usr/local/opt/python/libexec/bin:~/go/bin:~/net/dev-bo
 export GOPATH=~/go
 
 alias g=git
+alias n=netlify-api
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1024

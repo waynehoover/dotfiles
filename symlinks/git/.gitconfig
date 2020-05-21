@@ -1,6 +1,8 @@
 [user]
   name = Wayne Hoover
   email = w@waynehoover.com
+[includeIf "gitdir:~/net/"]
+  path = .gitconfig-net
 [core]
   excludesfile = ~/.dotgitignore
 [credential]
