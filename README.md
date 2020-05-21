@@ -3,5 +3,6 @@
 Simply just run
 ```
 git clone --recursive git@github.com:waynehoover/dotfiles.git ~/.dotfiles
-~/.dotfiles/zero/setup
+brew install zero
+zero
 ```

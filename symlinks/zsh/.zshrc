@@ -4,7 +4,11 @@ eval "$(~/.cargo/bin/zoxide init zsh)"
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-PATH=~/.cargo/bin:$PATH
+export PATH=~/.cargo/bin:/usr/local/opt/python/libexec/bin:~/go/bin:~/net/dev-bootstrap/bin:$PATH
+export NETLIFY_API_SRC=/Users/waynehoover/net/bitballoon
+export NETLIFY_UI_SRC=/Users/waynehoover/net/netlify-react-ui
+export NETLIFY_DEV_BOOTSTRAP_SRC=/Users/waynehoover/net/dev-bootstrap
+export GOPATH=~/go
 
 alias g=git
 
