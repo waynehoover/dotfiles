@@ -43,6 +43,7 @@ tap 'federico-terzi/espanso'
 brew 'espanso'
 tap 'zero-sh/tap'
 brew 'zero'
+brew 'apply-user-defaults'
 tap 'khanhas/tap'
 brew 'spicetify-cli'
 
@@ -63,6 +64,8 @@ brew 'zsh'
 brew 'mas'
 brew 'chruby'
 brew 'ruby-install'
+brew 'apply-user-defaults'
+brew 'stow'
 
 brew 'cfssl'
 

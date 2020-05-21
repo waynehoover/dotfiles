@@ -1,1 +1,3 @@
-cargo install zoxide -f
+#!/bin/sh
+
+cargo install zoxide

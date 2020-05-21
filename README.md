@@ -1,8 +1,7 @@
-# dotfiles
+# Wayne Hoovers Dotfiles
 
-Some good things to have:
-```bash
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
-brew cask install font-hack
+Simply just run
+```
+git clone --recursive git@github.com:waynehoover/dotfiles.git ~/.dotfiles
+~/.dotfiles/zero/setup
 ```
