@@ -1,8 +1,10 @@
 eval "$(starship init zsh)"
-eval "$(/Users/wayne/.cargo/bin/zoxide init zsh)"
+eval "$(~/.cargo/bin/zoxide init zsh)"
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+
+PATH=~/.cargo/bin:$PATH
 
 alias g=git
 
