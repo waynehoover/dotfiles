@@ -8,6 +8,7 @@
 [alias]
   amend = !git add -A && git commit --amend --no-edit
   p = !git push origin $(git rev-parse --abbrev-ref HEAD)
+  pl = !git pull
   c = "!git add -A && git commit -m "
   cc = "!git commit --amend -m "
   co = !git checkout
