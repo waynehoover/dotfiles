@@ -11,5 +11,6 @@
   c = "!git add -A && git commit -m "
   cc = "!git commit --amend -m "
   co = !git checkout
+  s = !git status
 [web]
   browser = open
