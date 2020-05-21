@@ -2,7 +2,7 @@
   "entries": {
     "cask": {
       "alfred": {
-        "version": "4.0.9_1144",
+        "version": "4.0.8_1135",
         "options": {
           "full_name": "alfred"
         }
@@ -20,7 +20,7 @@
         }
       },
       "bettertouchtool": {
-        "version": "3.373-1597",
+        "version": "3.339-1547",
         "options": {
           "full_name": "bettertouchtool"
         }
@@ -32,7 +32,7 @@
         }
       },
       "dash": {
-        "version": "5.1.5",
+        "version": "5.1.3",
         "options": {
           "full_name": "dash"
         }
@@ -50,7 +50,7 @@
         }
       },
       "firefox": {
-        "version": "76.0.1",
+        "version": "73.0.1",
         "options": {
           "full_name": "firefox"
         }
@@ -68,19 +68,19 @@
         }
       },
       "fork": {
-        "version": "1.0.93",
+        "version": "1.0.91.1",
         "options": {
           "full_name": "fork"
         }
       },
       "google-chrome": {
-        "version": "81.0.4044.138",
+        "version": "80.0.3987.132",
         "options": {
           "full_name": "google-chrome"
         }
       },
       "handbrake": {
-        "version": "1.3.2",
+        "version": "1.3.1",
         "options": {
           "full_name": "handbrake"
         }
@@ -92,7 +92,7 @@
         }
       },
       "ithoughtsx": {
-        "version": "5.20",
+        "version": "5.18",
         "options": {
           "full_name": "ithoughtsx"
         }
@@ -104,13 +104,13 @@
         }
       },
       "loom": {
-        "version": "0.36.7",
+        "version": "0.30.9",
         "options": {
           "full_name": "loom"
         }
       },
       "microsoft-excel": {
-        "version": "16.37.20051002",
+        "version": "16.35.20030802",
         "options": {
           "full_name": "microsoft-excel"
         }
@@ -140,19 +140,19 @@
         }
       },
       "sip": {
-        "version": "2.3",
+        "version": "2.2.5",
         "options": {
           "full_name": "sip"
         }
       },
       "skype": {
-        "version": "8.59.0.77",
+        "version": "8.57.0.116",
         "options": {
           "full_name": "skype"
         }
       },
       "slack": {
-        "version": "4.5.0",
+        "version": "4.3.3",
         "options": {
           "full_name": "slack"
         }
@@ -170,13 +170,13 @@
         }
       },
       "tableplus": {
-        "version": "3.5.0,308",
+        "version": "3.1.2,296",
         "options": {
           "full_name": "tableplus"
         }
       },
       "telegram": {
-        "version": "6.1.4.200256",
+        "version": "5.9.3.191685",
         "options": {
           "full_name": "telegram"
         }
@@ -194,19 +194,19 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.45.1",
+        "version": "1.42.1",
         "options": {
           "full_name": "visual-studio-code"
         }
       },
       "vlc": {
-        "version": "3.0.10",
+        "version": "3.0.8",
         "options": {
           "full_name": "vlc"
         }
       },
       "whatsapp": {
-        "version": "2.2019.8",
+        "version": "0.4.1300",
         "options": {
           "full_name": "whatsapp"
         }
@@ -234,6 +234,12 @@
         "options": {
           "full_name": "docker"
         }
+      },
+      "google-backup-and-sync": {
+        "version": "latest",
+        "options": {
+          "full_name": "google-backup-and-sync"
+        }
       }
     },
     "tap": {
@@ -242,6 +248,9 @@
       },
       "khanhas/tap": {
         "revision": "d89a72a674e601b952539db42ff4b7d7f922f27a"
+      },
+      "zero-sh/tap": {
+        "revision": "db6b70be1ff6055566f9d5b1d8d6cb8a372d0ce9"
       }
     },
     "brew": {
@@ -658,6 +667,10 @@
             }
           }
         }
+      },
+      "zero": {
+        "version": "0.3.0",
+        "bottle": false
       }
     },
     "mas": {
@@ -676,7 +689,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.17",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "d6369c8537e7de31f76a1a3d0e1b2589022ed6b1",
+        "Homebrew/homebrew-core": "9ebe1c54f5c89d723d3aba806579bd95387d045e",
         "CLT": "11.4.1.0.1.1586360307",
         "Xcode": "11.4.1",
         "macOS": "10.15.4"

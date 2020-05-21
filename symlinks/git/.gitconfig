@@ -1,0 +1,15 @@
+[user]
+  name = Wayne Hoover
+  email = w@waynehoover.com
+[core]
+  excludesfile = ~/.dotgitignore
+[credential]
+  helper = osxkeychain
+[alias]
+  amend = !git add -A && git commit --amend --no-edit
+  p = !git push origin $(git rev-parse --abbrev-ref HEAD)
+  c = "!git add -A && git commit -m "
+  cc = "!git commit --amend -m "
+  co = !git checkout
+[web]
+  browser = open

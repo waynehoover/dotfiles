@@ -1,0 +1,109 @@
+NSGlobalDomain:
+  # System Preferences > Keyboard > Shortcuts > Full Keyboard Access > All controls.
+  AppleKeyboardUIMode: 3
+
+  # System Preferences > General > Sidebar icon size > Large.
+  NSTableViewDefaultSizeMode: 3
+
+  # Disable press and hold character picker.
+  ApplePressAndHoldEnabled: false
+
+  # System Preferences > Keyboard > Key Repeat.
+  KeyRepeat: 1
+
+  # System Preferences > Keyboard > Delay Until Repeat.
+  InitialKeyRepeat: 10
+
+  # Disable smooth scrolling
+  NSScrollAnimationEnabled: false
+
+  # Finder > Preferences > Show all filename extensions
+  AppleShowAllExtensions: true
+
+com.apple.desktopservices:
+  # Disable .DS_Store files on network drives.
+  DSDontWriteNetworkStores: true
+
+  # Disable .DS_Store files on external drives.
+  DSDontWriteUSBStores: true
+
+com.apple.driver.AppleBluetoothMultitouch.trackpad:
+  # System Preferences > Trackpad > Tap to click
+  Clicking: true
+
+com.apple.finder:
+  # Finder > View > Show view options > Sort Group By > Name.
+  FXArrangeGroupViewBy: Name
+
+  # Finder > Preferences > Advanced > When performing a search > Search the
+  # current folder.
+  FXDefaultSearchScope: SCcf
+
+  # Finder > View > Show view options > Group By > None.
+  FXPreferredGroupBy: None
+
+  # Finder > View > As List.
+  FXPreferredViewStyle: Nlsv
+
+  # Finder > Preferences > New Finder windows show > Home directory.
+  NewWindowTarget: PfHm
+
+  # Finder > Preferences > New Finder windows show > Home directory.
+  NewWindowTargetPath: "file://${HOME}"
+
+  # Enable "Quit Finder" menu item.
+  QuitMenuItem: true
+
+  # Finder > Preferences > Show these items on the desktop > Hard disks.
+  ShowHardDrivesOnDesktop: false
+
+  # Finder > View > Show Path Bar.
+  ShowPathbar: true
+
+  # Finder > Preferences > Show wraning before changing an extension
+  FXEnableExtensionChangeWarning: false
+
+  # Finder > Preferences > Show wraning before removing from iCloud Drive
+  FXEnableRemoveFromICloudDriveWarning: false
+
+com.apple.dock:
+  # System Preferences > Mission Controll > Automatically rearrange Spaces based on most recent use
+  mru-spaces: false
+
+  autohide-time-modifier: 0
+  autohide-delay: 0
+  mineffect: scale
+  magnification: true
+  tilesize: 36
+
+com.apple.screensaver:
+  idleTime: 0
+
+com.apple.dashboard:
+    mcx-disabled: true
+
+com.apple.iTunes:
+  # iTunes > Preferences > Devices > Prevent iPods, iPhones, and iPads from
+  # syncing automatically.
+  dontAutomaticallySyncIPods: true
+
+com.apple.Safari:
+  # Use substring search by default in Safari.
+  FindOnPageMatchesWordStartsOnly: false
+
+com.apple.TextEdit:
+  # TextEdit > Preferences > New Document > Plain text.
+  RichText: false
+
+com.apple.SoftwareUpdate:
+  # System Preferences > Software Update > Advanced... > Automatically check for
+  # updates.
+  AutomaticCheckEnabled: true
+
+  # System Preferences > Software Update > Advanced... > Download new updates
+  # when available.
+  AutomaticDownload: true
+
+com.kapeli.dashdoc:
+  # Dash > Preferences > General > Behavior > Show dock icon > Off.
+  showInDock: false
