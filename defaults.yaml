@@ -3,7 +3,7 @@ NSGlobalDomain:
   AppleKeyboardUIMode: 3
 
   # System Preferences > General > Sidebar icon size > Large.
-  NSTableViewDefaultSizeMode: 3
+  NSTableViewDefaultSizeMode: 2
 
   # Disable press and hold character picker.
   ApplePressAndHoldEnabled: false
@@ -73,8 +73,8 @@ com.apple.dock:
   autohide-time-modifier: 0
   autohide-delay: 0
   mineffect: scale
-  magnification: true
-  tilesize: 36
+  magnification: false
+  tilesize: 50
 
 com.apple.screensaver:
   idleTime: 0
