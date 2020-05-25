@@ -38,14 +38,8 @@ cask 'xmind'
 cask 'google-cloud-sdk'
 cask 'docker'
 cask 'google-backup-and-sync'
-
-tap 'federico-terzi/espanso'
-brew 'espanso'
-tap 'zero-sh/tap'
-brew 'zero'
-brew 'apply-user-defaults'
-tap 'khanhas/tap'
-brew 'spicetify-cli'
+cask 'cleanshot'
+cask 'netnewswire'
 
 brew 'ffmpeg'
 brew 'fish'
@@ -68,8 +62,18 @@ brew 'apply-user-defaults'
 brew 'stow'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
-
+brew 'zsh-autosuggestions'
 brew 'cfssl'
+
+tap 'federico-terzi/espanso'
+brew 'espanso'
+tap 'zero-sh/tap'
+brew 'zero'
+brew 'apply-user-defaults'
+tap 'khanhas/tap'
+brew 'spicetify-cli'
+tap 'yqrashawn/goku'
+brew 'goku'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498

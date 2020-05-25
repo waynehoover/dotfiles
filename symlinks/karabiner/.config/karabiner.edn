@@ -1,0 +1,42 @@
+;; P -> caps_lock
+{
+ :profiles
+ {:Default {:default true
+            :sim     50
+            :delay   80
+            :alone   120
+            :held    0}},
+ :templates {:open "open \"%s\""}
+ :layers    {:open {:key :e}}
+;  :simlayers {:launch-mode {:key :e}}
+ :main [
+        {:des "caps to delete"
+        :rules [[:caps_lock :delete_or_backspace]]}
+        {:des "swap : and ; on dvorak"
+         :rules [[:z :!Rz] [:!Rz :z]]}
+        ; {:des   "launch mode"
+        ;       :rules [[:j [:open "/Applications/Brave Browser.app"] :launch-mode]
+        ;               [:k [:open "/Applications/iTerm.app"] :launch-mode]]}
+        {:des "open-layer"
+                :rules [:open
+                         [:spacebar [:e :spacebar]] ;;for fast typing
+                         [:l [:open "/Applications/iTerm.app"]]
+                         [:j [:open "/Applications/Visual Studio Code.app"]]
+                         [:semicolon [:open "/Applications/Slack.app"]]
+                         [:k [:open "/Applications/Brave Browser.app"]]
+                ]
+        }
+        ; this is the same as :layers above
+        ; {:des "period mode"
+        ;          :rules [
+        ;                  [:e ["period-mode" 1] nil {:afterup ["period-mode" 0] :alone :e}]
+        ;                  [:spacebar [:e :spacebar] ["period-mode" 1]] ;;for fast typing
+        ;                  [:k [:open "/Applications/iTerm.app"] ["period-mode" 1]]
+        ;                  [:l [:open "/Applications/Visual Studio Code.app"] ["period-mode" 1]]
+        ;                  [:semicolon [:open "/Applications/Slack.app"] ["period-mode" 1]]
+        ;                  [:j [:open "/Applications/Brave Browser.app"] ["period-mode" 1]]
+        ;                 ]
+        ; }
+
+ ]
+}
