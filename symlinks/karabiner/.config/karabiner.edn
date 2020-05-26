@@ -1,4 +1,5 @@
-;; P -> caps_lock
+;; Assumes dvorak iulm layout
+;; all keycodes https://github.com/yqrashawn/GokuRakuJoudo/blob/master/src/karabiner_configurator/keys_inf
 {
  :profiles
  {:Default {:default true
@@ -8,35 +9,32 @@
             :held    0}},
  :templates {:open "open \"%s\""}
  :layers    {:open {:key :e}}
-;  :simlayers {:launch-mode {:key :e}}
  :main [
         {:des "caps to delete"
-        :rules [[:caps_lock :delete_or_backspace]]}
-        {:des "swap : and ; on dvorak"
-         :rules [[:z :!Rz] [:!Rz :z]]}
-        ; {:des   "launch mode"
-        ;       :rules [[:j [:open "/Applications/Brave Browser.app"] :launch-mode]
-        ;               [:k [:open "/Applications/iTerm.app"] :launch-mode]]}
-        {:des "open-layer"
-                :rules [:open
-                         [:spacebar [:e :spacebar]] ;;for fast typing
-                         [:l [:open "/Applications/iTerm.app"]]
-                         [:j [:open "/Applications/Visual Studio Code.app"]]
-                         [:semicolon [:open "/Applications/Slack.app"]]
-                         [:k [:open "/Applications/Brave Browser.app"]]
-                ]
-        }
-        ; this is the same as :layers above
-        ; {:des "period mode"
-        ;          :rules [
-        ;                  [:e ["period-mode" 1] nil {:afterup ["period-mode" 0] :alone :e}]
-        ;                  [:spacebar [:e :spacebar] ["period-mode" 1]] ;;for fast typing
-        ;                  [:k [:open "/Applications/iTerm.app"] ["period-mode" 1]]
-        ;                  [:l [:open "/Applications/Visual Studio Code.app"] ["period-mode" 1]]
-        ;                  [:semicolon [:open "/Applications/Slack.app"] ["period-mode" 1]]
-        ;                  [:j [:open "/Applications/Brave Browser.app"] ["period-mode" 1]]
-        ;                 ]
-        ; }
+        :rules [
+                [:caps_lock :delete_or_backspace]
+        ]}
 
- ]
-}
+        {:des "swap : and ; on dvorak"
+         :rules [
+                 [:z :!Rz] [:!Rz :z]
+        ]}
+
+        {:des "Shift -> () or Shift"
+        :rules [
+                [:##left_shift :left_shift nil {:alone :!S9} ]
+                [:##right_shift :right_shift nil {:alone :!S0} ]
+        ]}
+
+        {:des "quick launch"
+        :rules [:open
+                [:spacebar [:e :spacebar]] ;;for fast typing .space
+                [:l [:open "/Applications/iTerm.app"]]
+                [:j [:open "/Applications/Visual Studio Code.app"]]
+                [:semicolon [:open "/Applications/Slack.app"]]
+                [:k [:open "/Applications/Brave Browser.app"]]
+                [:i [:open "/System/Applications/Mail.app"]]
+        ]}
+
+ ] ;; /main
+} ;; /profiles
