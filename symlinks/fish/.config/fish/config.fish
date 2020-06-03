@@ -29,7 +29,7 @@ end
 
 set fish_greeting
 
-set -x PATH $PATH ~/.cargo/bin /usr/local/opt/python/libexec/bin ~/go/bin ~/net/dev-bootstrap/bin
+set -x PATH ~/.cargo/bin /usr/local/opt/python/libexec/bin ~/go/bin ~/net/dev-bootstrap/bin $PATH
 set -x GOPATH ~/go
 
 starship init fish | source
