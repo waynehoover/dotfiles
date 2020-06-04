@@ -19,7 +19,7 @@ cask 'loom'
 cask 'microsoft-excel'
 cask 'obs'
 cask 'olive'
-cask 'onyx'
+#cask 'onyx' causing issues right now
 cask 'psequel'
 cask 'sip'
 cask 'skype'
@@ -77,3 +77,4 @@ brew 'goku'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
+mas 'Meeter - Join Meetings Faster', id: 1510445899
