@@ -31,6 +31,7 @@ set fish_greeting
 
 set -x PATH ~/.cargo/bin /usr/local/opt/python/libexec/bin ~/go/bin ~/net/dev-bootstrap/bin $PATH
 set -x GOPATH ~/go
+set -x fish_user_paths "/usr/local/sbin" $fish_user_path
 
 starship init fish | source
 zoxide init fish | source
