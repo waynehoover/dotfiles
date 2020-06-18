@@ -64,6 +64,7 @@ brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
 brew 'zsh-autosuggestions'
 brew 'cfssl'
+brew 're2'
 
 tap 'federico-terzi/espanso'
 brew 'espanso'
@@ -74,6 +75,8 @@ tap 'khanhas/tap'
 brew 'spicetify-cli'
 tap 'yqrashawn/goku'
 brew 'goku'
+tap 'Schniz/tap'
+brew 'fnm'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498

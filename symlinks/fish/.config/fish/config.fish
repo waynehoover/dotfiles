@@ -35,8 +35,10 @@ set -x fish_user_paths "/usr/local/sbin" $fish_user_path
 
 starship init fish | source
 zoxide init fish | source
+fnm env --multi | source
 
 source ~/.exports.fish
 
 abbr -a g git
 abbr -a n netlify-api
+
