@@ -80,4 +80,5 @@ brew 'fnm'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
-mas 'Meeter - Join Meetings Faster', id: 1510445899
+mas 'Meeter for Zoom, Teams & Co', id: 1510445899
+mas 'iA Writer', id: 775737590

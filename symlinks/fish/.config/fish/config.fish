@@ -39,6 +39,8 @@ fnm env --multi | source
 
 source ~/.exports.fish
 
+# currently using https://github.com/bouk/chruby-fish/tree/rewrite-fish for chruby
+source /usr/local/share/fish/vendor_functions.d/chruby_auto.fish
+
 abbr -a g git
 abbr -a n netlify-api
-
