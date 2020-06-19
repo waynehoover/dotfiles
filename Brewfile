@@ -16,7 +16,7 @@ cask 'istat-menus'
 cask 'ithoughtsx'
 cask 'karabiner-elements'
 cask 'loom'
-cask 'microsoft-excel'
+#cask 'microsoft-excel' just use google docs
 cask 'obs'
 cask 'olive'
 #cask 'onyx' causing issues right now
