@@ -15,5 +15,8 @@
   cc = "!git commit --amend -m "
   co = !git checkout
   s = !git status
+  d = !git diff
 [web]
   browser = open
+[pull]
+	rebase = false
