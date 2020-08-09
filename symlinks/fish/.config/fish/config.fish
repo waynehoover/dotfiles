@@ -43,4 +43,12 @@ source ~/.exports.fish
 source /usr/local/share/fish/vendor_functions.d/chruby_auto.fish
 
 abbr -a g git
-abbr -a n netlify-api
+
+alias ls='lsd'
+alias cat='bat'
+alias find='fd'
+alias ps='procs'
+alias sed='sd'
+alias du='dust'
+alias grep='ripgrep'
+alias top='ytop'

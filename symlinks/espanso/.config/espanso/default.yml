@@ -1,15 +1,28 @@
 # espanso configuration file
-
-# This is the default configuration file, change it as you like it
-# You can refer to the official documentation:
 # https://espanso.org/docs/
 
-# Matches are the substitution rules, when you type the "trigger" string
-# it gets replaced by the "replace" string.
 matches:
-  # Simple text replacement
   - trigger: "eii"
     replace: "w@waynehoover.com"
 
-  - trigger: "mii"
+  - trigger: "lii"
     replace: "[$|$](https://)"
+
+  - trigger: "pii"
+    replace: "424-229-2414"
+
+  - trigger: "aii"
+    replace: "265 Bellevue Drive, Boulder, CO 80302"
+
+  - triggers: ["teh", "thee"]
+    replace: "the"
+    word: true
+
+  - trigger: "<aii"
+    replace: "<a href='{{clipboard}}' />$|$</a>"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+
+toggle_key: OFF
+
