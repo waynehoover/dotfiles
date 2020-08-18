@@ -42,6 +42,8 @@ cask 'cleanshot'
 cask 'netnewswire'
 cask 'soulver'
 cask 'soundsource'
+cask 'qlmarkdown'
+cask 'sigil'
 
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
