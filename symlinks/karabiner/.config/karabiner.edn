@@ -1,14 +1,15 @@
 ;; Assumes dvorak iulm layout
-;; all keycodes https://github.com/yqrashawn/GokuRakuJoudo/blob/master/src/karabiner_configurator/keys_inf
+;; all keycodes https://github.com/yqrashawn/GokuRakuJoudo/blob/master/src/karabiner_configurator/keys.clj#L60
+;; keycodes again: https://github.com/yqrashawn/GokuRakuJoudo/blob/master/CHANGELOG.org#032---2020-05-28
+;; rule [:period ["period-mode" 1] nil {:afterup ["period-mode" 0] :alone :period}]
 {
  :profiles
  {:Default {:default true
-            :sim     50
-            :delay   80
+            :sim     35
+            :delay   50
             :alone   120
             :held    0}},
  :templates {:open "open \"%s\""}
- :layers    {:open {:key :e}}
  :main [
         {:des "caps to delete"
         :rules [
@@ -26,14 +27,23 @@
                 [:##right_shift :right_shift nil {:alone :!S0} ]
         ]}
 
-        {:des "quick launch"
-        :rules [:open
-                [:spacebar [:e :spacebar]] ;;for fast typing .space
-                [:l [:open "/Applications/iTerm.app"]]
-                [:j [:open "/Applications/Visual Studio Code.app"]]
-                [:semicolon [:open "/Applications/Slack.app"]]
-                [:k [:open "/Applications/Brave Browser.app"]]
-                [:i [:open "/System/Applications/Mail.app"]]
+        {:des "[, .] -> ` and [. p] -> ~"
+         :rules [
+                 [[:e :r] :grave_accent_and_tilde]
+                 [[:w :e] :!Sgrave_accent_and_tilde]
+        ]}
+
+        {:des "[backspace t] -> the_"
+         :rules [
+                 [[:delete_or_backspace :k] [:k :j :d :spacebar]]
+        ]}
+
+        {:des "[g c] -> cmd-opt-leftArrow` [c r] -> cmd-opt-rightArrow"
+         :rules [
+                 [[:u :i] [:!QEleft_arrow]]
+                 [[:i :o] [:!QEright_arrow]]
+                 [[:m :comma] [:!Qtab]]
+                 [[:comma :period] [:!Qgrave_accent_and_tilde]]
         ]}
 
  ] ;; /main

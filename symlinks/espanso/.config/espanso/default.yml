@@ -2,23 +2,23 @@
 # https://espanso.org/docs/
 
 matches:
-  - trigger: "eii"
+  - trigger: "..e"
     replace: "w@waynehoover.com"
 
-  - trigger: "lii"
+  - trigger: "..l"
     replace: "[$|$](https://)"
 
-  - trigger: "pii"
+  - trigger: "..p"
     replace: "424-229-2414"
 
-  - trigger: "aii"
+  - trigger: "..a"
     replace: "265 Bellevue Drive, Boulder, CO 80302"
 
   - triggers: ["teh", "thee"]
     replace: "the"
     word: true
 
-  - trigger: "<aii"
+  - trigger: "<a.."
     replace: "<a href='{{clipboard}}' />$|$</a>"
     vars:
       - name: "clipboard"

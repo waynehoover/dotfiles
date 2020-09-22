@@ -1,6 +1,7 @@
 cask 'alfred'
 cask 'bartender'
 cask 'beardedspice'
+cask 'brave-browser'
 cask 'bettertouchtool'
 cask 'cloudapp'
 cask 'dash'
@@ -84,6 +85,8 @@ brew 'procs'
 brew 'sd'
 brew 'dust'
 brew 'zoxide'
+brew 'switchaudio-osx'
+brew 'vips'
 
 tap 'federico-terzi/espanso'
 brew 'espanso'
@@ -103,3 +106,5 @@ mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
 mas 'Meeter for Zoom, Teams & Co', id: 1510445899
 mas 'iA Writer', id: 775737590
+mas 'WireGuard', id: 1451685025
+mas 'Harvest', id: 506189836
