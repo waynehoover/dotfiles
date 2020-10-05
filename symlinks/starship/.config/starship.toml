@@ -11,7 +11,7 @@ format = """\
     $jobs\
     $battery\
     $time\
-    $characte\
+    $character\
     """
 
 [git_status]
