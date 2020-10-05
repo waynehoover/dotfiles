@@ -45,6 +45,7 @@ cask 'soulver'
 cask 'soundsource'
 cask 'qlmarkdown'
 cask 'sigil'
+cask 'gitup'
 
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'

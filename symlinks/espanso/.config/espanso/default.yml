@@ -18,6 +18,18 @@ matches:
     replace: "the"
     word: true
 
+  - trigger: "dont"
+    replace: "don't"
+    word: true
+
+  - trigger: "cant"
+    replace: "can't"
+    word: true
+
+  - trigger: "consc"
+    replace: "consciousness"
+    word: true
+
   - trigger: "<a.."
     replace: "<a href='{{clipboard}}' />$|$</a>"
     vars:
