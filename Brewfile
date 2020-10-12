@@ -46,6 +46,7 @@ cask 'soundsource'
 cask 'qlmarkdown'
 cask 'sigil'
 cask 'gitup'
+cask 'eloston-chromium' # ungoogled-chromium
 
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
@@ -102,6 +103,8 @@ tap 'Schniz/tap'
 brew 'fnm'
 tap 'cjbassi/ytop'
 brew 'ytop'
+tap 'shopify/shopify'
+brew 'themekit'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
@@ -109,3 +112,4 @@ mas 'Meeter for Zoom, Teams & Co', id: 1510445899
 mas 'iA Writer', id: 775737590
 mas 'WireGuard', id: 1451685025
 mas 'Harvest', id: 506189836
+mas 'SiteSucker', id: 442168834
