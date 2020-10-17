@@ -8,7 +8,6 @@ cask 'dash'
 cask 'discord'
 cask 'evernote'
 cask 'firefox'
-cask 'flume'
 cask 'flux'
 cask 'fork'
 cask 'google-chrome'
@@ -112,4 +111,4 @@ mas 'Meeter for Zoom, Teams & Co', id: 1510445899
 mas 'iA Writer', id: 775737590
 mas 'WireGuard', id: 1451685025
 mas 'Harvest', id: 506189836
-mas 'SiteSucker', id: 442168834
+# mas 'SiteSucker', id: 442168834
