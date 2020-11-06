@@ -35,7 +35,7 @@ set -x fish_user_paths "/usr/local/sbin" $fish_user_path
 
 starship init fish | source
 zoxide init fish | source
-fnm env --multi | source
+fnm env | source
 
 source ~/.exports.fish
 
