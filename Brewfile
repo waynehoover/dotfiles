@@ -46,6 +46,7 @@ cask 'qlmarkdown'
 cask 'sigil'
 cask 'gitup'
 cask 'eloston-chromium' # ungoogled-chromium
+cask 'imageoptim'
 
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
@@ -104,6 +105,8 @@ tap 'cjbassi/ytop'
 brew 'ytop'
 tap 'shopify/shopify'
 brew 'themekit'
+tap 'heroku/brew'
+brew 'heroku'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
