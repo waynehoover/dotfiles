@@ -47,7 +47,7 @@ cask 'sigil'
 cask 'gitup'
 cask 'eloston-chromium' # ungoogled-chromium
 cask 'imageoptim'
-
+cask 'android-platform-tools' # adb
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
