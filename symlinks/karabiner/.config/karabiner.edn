@@ -33,17 +33,12 @@
                  [[:w :e] :!Sgrave_accent_and_tilde]
         ]}
 
-        {:des "[backspace t] -> the_"
-         :rules [
-                 [[:delete_or_backspace :k] [:k :j :d :spacebar]]
-        ]}
-
         {:des "[g c] -> cmd-opt-leftArrow` [c r] -> cmd-opt-rightArrow"
          :rules [
-                 [[:u :i] [:!QEleft_arrow]]
-                 [[:i :o] [:!QEright_arrow]]
-                 [[:m :comma] [:!Qtab]]
-                 [[:comma :period] [:!Qgrave_accent_and_tilde]]
+                 [[:m :comma] [:!QEleft_arrow]]
+                 [[:comma :period] [:!QEright_arrow]]
+                 [[:z :x] [:!Qtab]]
+                 [[:x :c] [:!Qgrave_accent_and_tilde]]
         ]}
 
  ] ;; /main
