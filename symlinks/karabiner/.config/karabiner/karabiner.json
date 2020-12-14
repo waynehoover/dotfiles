@@ -162,9 +162,9 @@
         }, {
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "z"
-            }, {
               "key_code" : "x"
+            }, {
+              "key_code" : "c"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : false,
@@ -181,9 +181,9 @@
         }, {
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "x"
-            }, {
               "key_code" : "c"
+            }, {
+              "key_code" : "v"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : false,

@@ -37,8 +37,8 @@
          :rules [
                  [[:m :comma] [:!QEleft_arrow]]
                  [[:comma :period] [:!QEright_arrow]]
-                 [[:z :x] [:!Qtab]]
-                 [[:x :c] [:!Qgrave_accent_and_tilde]]
+                 [[:x :c] [:!Qtab]]
+                 [[:c :v] [:!Qgrave_accent_and_tilde]]
         ]}
 
  ] ;; /main
