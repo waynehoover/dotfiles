@@ -1,8 +1,10 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_be:bundle\x20exec
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_n:netlify\x2dapi
+SETUVAR _fish_abbr_rspec:bundle\x20exec\x20rspec
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7

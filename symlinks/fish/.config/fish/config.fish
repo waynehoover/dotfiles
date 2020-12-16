@@ -43,6 +43,8 @@ source ~/.exports.fish
 source /usr/local/share/fish/vendor_functions.d/chruby_auto.fish
 
 abbr -a g git
+abbr -a rspec bundle exec rspec
+abbr -a be bundle exec
 
 alias ls='lsd'
 alias cat='bat'

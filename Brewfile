@@ -48,6 +48,8 @@ cask 'gitup'
 cask 'eloston-chromium' # ungoogled-chromium
 cask 'imageoptim'
 cask 'android-platform-tools' # adb
+tap 'melonamin/formulae'
+cask 'swiftbar'
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
@@ -114,4 +116,3 @@ mas 'Meeter for Zoom, Teams & Co', id: 1510445899
 mas 'iA Writer', id: 775737590
 mas 'WireGuard', id: 1451685025
 mas 'Harvest', id: 506189836
-# mas 'SiteSucker', id: 442168834
