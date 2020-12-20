@@ -21,12 +21,6 @@
           "to" : [ {
             "key_code" : "delete_or_backspace"
           } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452
-            } ],
-            "type" : "device_if"
-          } ],
           "type" : "basic"
         } ]
       }, {
@@ -68,12 +62,6 @@
           "to" : [ {
             "key_code" : "left_shift"
           } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452
-            } ],
-            "type" : "device_if"
-          } ],
           "type" : "basic"
         }, {
           "to_if_alone" : [ {
@@ -88,12 +76,6 @@
           },
           "to" : [ {
             "key_code" : "right_shift"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452
-            } ],
-            "type" : "device_if"
           } ],
           "type" : "basic"
         } ]
