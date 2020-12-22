@@ -45,6 +45,7 @@ cask 'soundsource'
 cask 'qlmarkdown'
 cask 'sigil'
 cask 'gitup'
+cask 'muzzle'
 cask 'eloston-chromium' # ungoogled-chromium
 cask 'imageoptim'
 cask 'android-platform-tools' # adb
