@@ -15,16 +15,21 @@
          :kyria [ {:vendor_id 65261} ]
          :apple [ {:vendor_id 1452} ]
  }
+ :applications {
+         :javaapp ["^com\\.install4j"]
+ }
  :main [
+        {:des "swap ctrl cmd java apps"
+         :rules [ :javaapp [:left_command :left_control] ]
+        }
+
         {:des "caps to delete"
-        :rules [ :apple
-                [:caps_lock :delete_or_backspace]
-        ]}
+        :rules [ :apple [:caps_lock :delete_or_backspace] ]
+        }
 
         {:des "swap : and ; on dvorak"
-         :rules [
-                 [:z :!Rz] [:!Rz :z]
-        ]}
+         :rules [ [:z :!Rz] [:!Rz :z] ]
+        }
 
         {:des "Shift -> () or Shift"
         :rules [ :apple

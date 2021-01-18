@@ -13,6 +13,21 @@
         "basic.to_if_held_down_threshold_milliseconds" : 0
       },
       "rules" : [ {
+        "description" : "swap ctrl cmd java apps",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "^com\\.install4j" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "caps to delete",
         "manipulators" : [ {
           "from" : {
