@@ -1,55 +1,71 @@
 ;; Assumes dvorak iulm layout
-;; all keycodes https://github.com/yqrashawn/GokuRakuJoudo/blob/master/src/karabiner_configurator/keys.clj#L60
-;; keycodes again: https://github.com/yqrashawn/GokuRakuJoudo/blob/master/CHANGELOG.org#032---2020-05-28
 ;; good exmaple file https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126
-;; rule [:period ["period-mode" 1] nil {:afterup ["period-mode" 0] :alone :period}]
-{
- :profiles
- {:Default {:default true
-            :sim     35
-            :delay   50
-            :alone   120
-            :held    0}},
+{:profiles
+  {:Default {
+    :default true
+    :alone   80 ; hold for x ms to register single tap
+    :held    50 ; key is fired twice when x ms is elapsed (otherwise seen as a hold command)
+    :delay   0  ; time after which the key press is delayed
+    :sim     30 ; keys need to be pressed within this threshold to be considered simultaneous
+  }}
  :templates {:open "open \"%s\""}
  :devices {
-         :kyria [ {:vendor_id 65261} ]
-         :apple [ {:vendor_id 1452} ]
+  :kyria [ {:vendor_id 65261} ]
+  :apple [ {:vendor_id 1452} ]
  }
  :applications {
-         :javaapp ["^com\\.install4j"]
+  :javaapp ["^com\\.install4j"]
  }
+
  :main [
-        {:des "swap ctrl cmd java apps"
-         :rules [ :javaapp [:left_command :left_control] ]
-        }
+  {:des "swap ctrl cmd java apps"
+    :rules [ :javaapp [:left_command :left_control] ]
+  }
 
-        {:des "caps to delete"
-        :rules [ :apple [:caps_lock :delete_or_backspace] ]
-        }
+  {:des "caps to delete"
+    :rules [ :apple [:caps_lock :delete_or_backspace] ]
+  }
 
-        {:des "swap : and ; on dvorak"
-         :rules [ [:z :!Rz] [:!Rz :z] ]
-        }
+  {:des "swap : and ; on dvorak"
+   :rules [ [:z :!Rz] [:!Rz :z] ]
+  }
 
-        {:des "Shift -> () or Shift"
-        :rules [ :apple
-                [:##left_shift :left_shift nil {:alone :!S9}]
-                [:##right_shift :right_shift nil {:alone :!S0}]
-        ]}
+  {:des "Shift -> () or Shift"
+    :rules [ :apple
+      [:##left_shift :left_shift nil {:alone :!S9}]
+      [:##right_shift :right_shift nil {:alone :!S0}]
+  ]}
 
-        {:des "[, .] -> ` and [. p] -> ~"
-         :rules [
-                 [[:e :r] :grave_accent_and_tilde]
-                 [[:w :e] :!Sgrave_accent_and_tilde]
-        ]}
+  {:des ". -> hyper on hold"
+    :rules [ :apple
+      [:e :!CTOleft_shift nil {:alone :e}]
+  ]}
 
-        {:des "[g c] -> cmd-opt-leftArrow` [c r] -> cmd-opt-rightArrow"
-         :rules [
-                 [[:m :comma] [:!QEleft_arrow]]
-                 [[:comma :period] [:!QEright_arrow]]
-                 [[:x :c] [:!Qtab]]
-                 [[:c :v] [:!Qgrave_accent_and_tilde]]
-        ]}
+  {:des "[, p] -> ` and [' ,] -> ~"
+   :rules [
+     [[:w :r] :grave_accent_and_tilde]
+     [[:q :r] :!Sgrave_accent_and_tilde]
+  ]}
+
+  {:des "[g c] -> - and [g m] -> _"
+   :rules [
+     [[:u :i] :quote]
+     [[:u :p] :!Squote]
+  ]}
+
+  {:des "[l w] -> cmd-opt-leftArrow [w v] -> cmd-opt-rightArrow"
+   :rules [
+     [[:m :comma] [:!QEleft_arrow]]
+     [[:comma :period] [:!QEright_arrow]]
+  ]}
+
+  {:des "open applications with hyper (!!)"
+   :rules [
+     [:!!j [:open "/Applications/Firefox Developer Edition.app"]]
+     [:!!k [:open "/Applications/Visual Studio Code.app"]]
+     [:!!l [:open "/Applications/iTerm.app"]]
+     [:!!semicolon [:open "/Applications/Slack.app"]]
+  ]}
 
  ] ;; /main
 } ;; /profiles
