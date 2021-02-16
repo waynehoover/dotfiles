@@ -3,7 +3,7 @@
 {:profiles
   {:Default {
     :default true
-    :alone   80 ; hold for x ms to register single tap
+    :alone   140 ; hold for x ms to register single tap
     :held    50 ; key is fired twice when x ms is elapsed (otherwise seen as a hold command)
     :delay   0  ; time after which the key press is delayed
     :sim     30 ; keys need to be pressed within this threshold to be considered simultaneous
@@ -18,16 +18,12 @@
  }
 
  :main [
-  {:des "swap ctrl cmd java apps"
+  {:des "swap ctrl and cmd in java apps"
     :rules [ :javaapp [:left_command :left_control] ]
   }
 
   {:des "caps to delete"
     :rules [ :apple [:caps_lock :delete_or_backspace] ]
-  }
-
-  {:des "swap : and ; on dvorak"
-   :rules [ [:z :!Rz] [:!Rz :z] ]
   }
 
   {:des "Shift -> () or Shift"
@@ -36,21 +32,32 @@
       [:##right_shift :right_shift nil {:alone :!S0}]
   ]}
 
-  {:des ". -> hyper on hold"
+  {:des "cmd space -> cmd return"
     :rules [ :apple
-      [:e :!CTOleft_shift nil {:alone :e}]
+      [:!Cspacebar :!Creturn_or_enter]
   ]}
 
-  {:des "[, p] -> ` and [' ,] -> ~"
+  {:des "ctrl cmd c -> ctrl p then q"
+    :rules [
+      [:!TCi [:!Cr :x]]
+  ]}
+
+  {:des "ctrl w -> ctrl delete (delete word) and ctrl,shift w delete line"
+    :rules [
+      [:!Tcomma :!Odelete_or_backspace]
+      [:!TScomma :!Cdelete_or_backspace]
+  ]}
+
+  {:des ".p -> ` and ,. -> ~"
    :rules [
-     [[:w :r] :grave_accent_and_tilde]
-     [[:q :r] :!Sgrave_accent_and_tilde]
+     [[:w :e] :!Sgrave_accent_and_tilde]
+     [[:e :r] :grave_accent_and_tilde]
   ]}
 
-  {:des "[g c] -> - and [g m] -> _"
+  {:des "[g c] -> - and [c r] -> _"
    :rules [
      [[:u :i] :quote]
-     [[:u :p] :!Squote]
+    ;;  [[:i :o] :!Squote]
   ]}
 
   {:des "[l w] -> cmd-opt-leftArrow [w v] -> cmd-opt-rightArrow"
@@ -59,13 +66,35 @@
      [[:comma :period] [:!QEright_arrow]]
   ]}
 
-  {:des "open applications with hyper (!!)"
+  {:des "[q j] -> esc [j k] -> tab"
    :rules [
-     [:!!j [:open "/Applications/Firefox Developer Edition.app"]]
-     [:!!k [:open "/Applications/Visual Studio Code.app"]]
-     [:!!l [:open "/Applications/iTerm.app"]]
-     [:!!semicolon [:open "/Applications/Slack.app"]]
+     [[:x :c] [:escape]]
+     [[:c :v] [:delete_or_backspace]]
   ]}
+
+  ;; {:des "shift space -> delete"
+  ;;  :rules [ :kyria
+  ;;    [:!Rspacebar :delete_or_backspace]
+  ;; ]}
+  ; {:des ". -> hyper on hold"
+  ;   :rules [ :apple
+  ;     [:e :!CTOleft_shift nil {:alone :e}]
+  ;     [{:key :spacebar :modi [:left_control :left_shift :left_command :left_option]} [:e :spacebar]]
+  ; ]}
+
+  ;; {:des "hyper c -> ` and hyper g -> ~"
+  ;;  :rules [
+  ;;    [:!!u :!Sgrave_accent_and_tilde]
+  ;;    [:!!i :grave_accent_and_tilde]
+  ;; ]}
+
+  ;; {:des "open applications with hyper (!!)"
+  ;;  :rules [
+  ;;    [:!!j [:open "/Applications/Firefox Developer Edition.app"]]
+  ;;    [:!!k [:open "/Applications/Visual Studio Code.app"]]
+  ;;    [:!!l [:open "/Applications/iTerm.app"]]
+  ;;    [:!!semicolon [:open "/Applications/Slack.app"]]
+  ;; ]}
 
  ] ;; /main
 } ;; /profiles

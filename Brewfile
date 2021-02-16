@@ -58,6 +58,7 @@ cask 'font-fira-code-nerd-font'
 cask 'font-hack-nerd-font'
 cask 'font-inter'
 cask 'font-cascadia'
+cask 'meetingbar'
 
 brew 'ffmpeg'
 brew 'fish'
@@ -96,6 +97,8 @@ brew 'vips'
 brew 'tealdeer'
 brew 'bandwhich'
 brew 'grex'
+brew 'avr-gcc'
+brew 'bitwarden-cli'
 
 tap 'federico-terzi/espanso'
 brew 'espanso'
@@ -114,6 +117,8 @@ tap 'shopify/shopify'
 brew 'themekit'
 tap 'heroku/brew'
 brew 'heroku'
+tap ' qmk/qmk'
+brew 'qmk'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
