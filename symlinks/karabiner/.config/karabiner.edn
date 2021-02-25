@@ -62,14 +62,14 @@
 
   {:des "[l w] -> cmd-opt-leftArrow [w v] -> cmd-opt-rightArrow"
    :rules [
-     [[:m :comma] [:!QEleft_arrow]]
-     [[:comma :period] [:!QEright_arrow]]
+    [[:m :comma] [:!QEleft_arrow]]
+    [[:comma :period] [:!QEright_arrow]]
   ]}
 
-  {:des "[q j] -> esc [j k] -> tab"
+  {:des "[q j] -> ; [j k] -> :"
    :rules [
-     [[:x :c] [:escape]]
-     [[:c :v] [:delete_or_backspace]]
+     [[:x :c] :!Sz]
+     [[:c :v] :z]
   ]}
 
   ;; {:des "shift space -> delete"

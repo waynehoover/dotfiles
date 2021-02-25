@@ -8,11 +8,11 @@ matches:
   - trigger: "..l"
     replace: "[$|$](https://)"
 
-  - trigger: "..p"
-    replace: "424-229-2414"
+  - trigger: "i'm"
+    replace: "I'm"
 
-  - trigger: "..a"
-    replace: "265 Bellevue Drive, Boulder, CO 80302"
+  - trigger: "i'll"
+    replace: "I'll"
 
   - triggers: ["teh", "thee"]
     replace: "the"

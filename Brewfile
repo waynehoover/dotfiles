@@ -59,6 +59,8 @@ cask 'font-hack-nerd-font'
 cask 'font-inter'
 cask 'font-cascadia'
 cask 'meetingbar'
+cask 'flotato'
+cask 'multi'
 
 brew 'ffmpeg'
 brew 'fish'

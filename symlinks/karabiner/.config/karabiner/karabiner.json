@@ -257,7 +257,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "[q j] -> esc [j k] -> tab",
+        "description" : "[q j] -> ; [j k] -> :",
         "manipulators" : [ {
           "from" : {
             "simultaneous" : [ {
@@ -273,7 +273,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "escape"
+            "key_code" : "z",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -291,7 +292,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "delete_or_backspace"
+            "key_code" : "z"
           } ],
           "type" : "basic"
         } ]
