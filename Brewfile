@@ -101,6 +101,7 @@ brew 'bandwhich'
 brew 'grex'
 brew 'avr-gcc'
 brew 'bitwarden-cli'
+brew 'duti'
 
 tap 'federico-terzi/espanso'
 brew 'espanso'

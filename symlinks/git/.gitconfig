@@ -20,3 +20,5 @@
   browser = open
 [pull]
 	rebase = false
+[http]
+	sslVerify = true

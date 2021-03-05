@@ -49,25 +49,25 @@
   ]}
 
   {:des ".p -> ` and ,. -> ~"
-   :rules [
+   :rules [ :apple
      [[:w :e] :!Sgrave_accent_and_tilde]
      [[:e :r] :grave_accent_and_tilde]
   ]}
 
   {:des "[g c] -> - and [c r] -> _"
-   :rules [
+   :rules [ :apple
      [[:u :i] :quote]
     ;;  [[:i :o] :!Squote]
   ]}
 
   {:des "[l w] -> cmd-opt-leftArrow [w v] -> cmd-opt-rightArrow"
-   :rules [
+   :rules [ :apple
     [[:m :comma] [:!QEleft_arrow]]
     [[:comma :period] [:!QEright_arrow]]
   ]}
 
   {:des "[q j] -> ; [j k] -> :"
-   :rules [
+   :rules [ :apple
      [[:x :c] :!Sz]
      [[:c :v] :z]
   ]}
