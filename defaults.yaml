@@ -20,6 +20,9 @@ NSGlobalDomain:
   # Finder > Preferences > Show all filename extensions
   AppleShowAllExtensions: true
 
+  # https://apple.stackexchange.com/questions/104143/how-do-i-change-which-characters-os-x-considers-a-word-for-arrow-key-skippi/124788#124788
+  AppleTextBreakLocale: en_US_POSIX
+
 com.apple.desktopservices:
   # Disable .DS_Store files on network drives.
   DSDontWriteNetworkStores: true
@@ -44,6 +47,9 @@ com.apple.finder:
 
   # Finder > View > As List.
   FXPreferredViewStyle: Nlsv
+
+  # Display full POSIX path as Finder window title
+  FXShowPosixPathInTitle: true
 
   # Finder > Preferences > New Finder windows show > Home directory.
   NewWindowTarget: PfHm

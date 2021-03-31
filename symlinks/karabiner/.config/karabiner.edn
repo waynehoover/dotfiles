@@ -72,10 +72,11 @@
      [[:c :v] :z]
   ]}
 
-  ;; {:des "shift space -> delete"
-  ;;  :rules [ :kyria
-  ;;    [:!Rspacebar :delete_or_backspace]
-  ;; ]}
+  {:des "shift space -> :"
+   :rules [ :kyria
+     [:!Sspacebar [:z :spacebar]]
+  ]}
+
   ; {:des ". -> hyper on hold"
   ;   :rules [ :apple
   ;     [:e :!CTOleft_shift nil {:alone :e}]

@@ -30,6 +30,16 @@ matches:
     replace: "consciousness"
     word: true
 
+  - trigger: "..p"
+    replace: ":phoenix:\n"
+
+  - trigger: "..d"
+    replace: |
+            [[Daily Journal]]
+            3 Things grateful for
+            3 Things that would make today great
+            5 Priorities of the day
+
   - trigger: "<a.."
     replace: "<a href='{{clipboard}}' />$|$</a>"
     vars:
