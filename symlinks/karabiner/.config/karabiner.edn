@@ -26,6 +26,10 @@
     :rules [ :apple [:caps_lock :delete_or_backspace] ]
   }
 
+  {:des "fn to hyper"
+    :rules [ :apple [:fn :f19] ]
+  }
+
   {:des "Shift -> () or Shift"
     :rules [ :apple
       [:##left_shift :left_shift nil {:alone :!S9}]
@@ -42,7 +46,7 @@
       [:!TCi [:!Cr :x]]
   ]}
 
-  {:des "ctrl w -> ctrl delete (delete word) and ctrl,shift w delete line"
+  {:des "ctrl w -> ctrl delete (delete word) and ctrl,shift w -> cmd delete (delete line)"
     :rules [
       [:!Tcomma :!Odelete_or_backspace]
       [:!TScomma :!Cdelete_or_backspace]
@@ -66,16 +70,11 @@
     [[:comma :period] [:!QEright_arrow]]
   ]}
 
-  {:des "[q j] -> ; [j k] -> :"
-   :rules [ :apple
-     [[:x :c] :!Sz]
-     [[:c :v] :z]
-  ]}
-
-  {:des "shift space -> :"
-   :rules [ :kyria
-     [:!Sspacebar [:z :spacebar]]
-  ]}
+  ;; {:des "[q j] -> ; [j k] -> :"
+  ;;  :rules [ :apple
+  ;;    [[:x :c] :!Sz]
+  ;;    [[:c :v] :z]
+  ;; ]}
 
   ; {:des ". -> hyper on hold"
   ;   :rules [ :apple
