@@ -33,6 +33,7 @@ set -x PATH ~/.cargo/bin /usr/local/opt/python/libexec/bin ~/go/bin ~/net/dev-bo
 set -x GOPATH ~/go
 set -x fish_user_paths "/usr/local/sbin" $fish_user_path
 set -x BAT_THEME "Coldark-Cold"
+set -x EDITOR "code --wait"
 
 starship init fish | source
 zoxide init fish | source

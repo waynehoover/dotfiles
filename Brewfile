@@ -1,13 +1,13 @@
 cask 'alfred'
 cask 'bartender'
-cask 'beardedspice'
+# cask 'beardedspice'
 cask 'brave-browser'
 cask 'bettertouchtool'
 cask 'cloudapp'
 cask 'dash'
 cask 'discord'
 cask 'evernote'
-cask 'firefox'
+# cask 'firefox'
 cask 'homebrew/cask-versions/firefox-developer-edition'
 cask 'flux'
 cask 'fork'
@@ -61,7 +61,6 @@ cask 'font-cascadia'
 cask 'meetingbar'
 cask 'flotato'
 cask 'multi'
-cask 'nordvpn'
 cask 'hammerspoon'
 
 brew 'ffmpeg'
@@ -72,6 +71,8 @@ brew 'node'
 brew 'python'
 brew 'rust'
 brew 'postgresql'
+brew 'imagemagick'
+brew 'redis'
 brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
@@ -124,8 +125,10 @@ tap 'shopify/shopify'
 brew 'themekit'
 tap 'heroku/brew'
 brew 'heroku'
-tap ' qmk/qmk'
+tap 'qmk/qmk'
 brew 'qmk'
+tap 'stripe/stripe-cli'
+brew 'stripe'
 
 mas 'Todoist', id: 585829637
 mas 'Day One', id: 1055511498
@@ -133,3 +136,4 @@ mas 'Meeter for Zoom, Teams & Co', id: 1510445899
 mas 'iA Writer', id: 775737590
 mas 'WireGuard', id: 1451685025
 mas 'Harvest', id: 506189836
+mas 'NordVPN IKE - Unlimited VPN', id: 1116599239

@@ -31,7 +31,7 @@ matches:
     word: true
 
   - trigger: "..p"
-    replace: ":phoenix:\n"
+    replace: ":phoenix:"
 
   - trigger: "..d"
     replace: |

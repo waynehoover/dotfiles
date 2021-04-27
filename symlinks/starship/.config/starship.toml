@@ -13,6 +13,3 @@ format = """\
     $time\
     $character\
     """
-
-[git_status]
-show_sync_count = true
