@@ -106,7 +106,25 @@ function changeVolume(diff)
   end
 end
 
-hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Down', changeVolume(-3))
+local function sendSystemKey(key)
+  hs.eventtap.event.newSystemKeyEvent(key, true):setFlags({'alt', 'shift'}):post()
+  hs.eventtap.event.newSystemKeyEvent(key, false):setFlags({'alt', 'shift'}):post()
+end
+
+local volume = {
+  up   = function() sendSystemKey("SOUND_UP") end,
+  down = function()
+    hs.eventtap.event.newSystemKeyEvent('SOUND_DOWN', true):setFlags({"alt", "shift"}):post()
+    hs.eventtap.event.newSystemKeyEvent('SOUND_DOWN', false):setFlags({"alt", "shift"}):post()
+  end,
+  mute = function() sendSystemKey("MUTE") end,
+}
+
+-- hs.hotkey.bind({}, "f10", volume.mute)
+hs.hotkey.bind({}, "f8", volume.down, nil, volume.down)
+hs.hotkey.bind({}, "f9", volume.up, nil, volume.up)
+
+hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Down', volume.down)
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Up', changeVolume(3))
 
 

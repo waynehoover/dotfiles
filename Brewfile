@@ -52,16 +52,19 @@ cask 'imageoptim'
 cask 'android-platform-tools' # adb
 tap 'melonamin/formulae'
 cask 'swiftbar'
+cask 'meetingbar'
+cask 'flotato'
+cask 'multi'
+cask 'hammerspoon'
+cask 'obsidian'
+
+# fonts
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
 cask 'font-hack-nerd-font'
 cask 'font-inter'
 cask 'font-cascadia'
-cask 'meetingbar'
-cask 'flotato'
-cask 'multi'
-cask 'hammerspoon'
 
 brew 'ffmpeg'
 brew 'fish'
