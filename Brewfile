@@ -1,26 +1,21 @@
 cask 'alfred'
 cask 'bartender'
-# cask 'beardedspice'
 cask 'brave-browser'
 cask 'bettertouchtool'
 cask 'cloudapp'
 cask 'dash'
 cask 'discord'
 cask 'evernote'
-# cask 'firefox'
 cask 'homebrew/cask-versions/firefox-developer-edition'
 cask 'flux'
 cask 'fork'
 cask 'google-chrome'
 cask 'handbrake'
 cask 'istat-menus'
-#cask 'ithoughtsx'
 cask 'karabiner-elements'
 cask 'loom'
-#cask 'microsoft-excel' just use google docs
 cask 'obs'
 cask 'olive'
-#cask 'onyx' causing issues right now
 cask 'psequel'
 cask 'sip'
 cask 'skype'
@@ -57,6 +52,7 @@ cask 'flotato'
 cask 'multi'
 cask 'hammerspoon'
 cask 'obsidian'
+cask 'sublime-text'
 
 # fonts
 tap 'homebrew/cask-fonts'
@@ -110,6 +106,8 @@ brew 'bitwarden-cli'
 brew 'duti'
 brew 'grex'
 brew 'shared-mime-info'
+brew 'tmux'
+brew 'overmind'
 
 tap 'federico-terzi/espanso'
 brew 'espanso'
@@ -140,3 +138,4 @@ mas 'iA Writer', id: 775737590
 mas 'WireGuard', id: 1451685025
 mas 'Harvest', id: 506189836
 mas 'NordVPN IKE - Unlimited VPN', id: 1116599239
+mas 'Bitwarden', id: 1352778147
