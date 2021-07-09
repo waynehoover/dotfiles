@@ -22,6 +22,10 @@ matches:
     replace: "don't"
     word: true
 
+  - trigger: "Im"
+    replace: "I'm"
+    word: true
+
   - trigger: "cant"
     replace: "can't"
     word: true

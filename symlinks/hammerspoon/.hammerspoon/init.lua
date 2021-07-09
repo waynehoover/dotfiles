@@ -1,35 +1,8 @@
 local log = hs.logger.new('hammerspoon','debug')
+local am = require('app-management')
+local hyper = {'ctrl', 'shift', 'alt', 'cmd'}
 hs.window.animationDuration = 0
--- log.d('here')
-
 require('resize')
-
-local empty = [[ASCII:
-..........
-..........
-..........
-..........
-..........
-..........
-..........
-..........
-..........
-..........
-]]
-
-local circle = [[ASCII:
-....11....
-....22....
-....33....
-....44....
-1234554321
-1234554321
-....44....
-....33....
-....22....
-....11....
-]]
-
 local menu = hs.menubar.new()
 
 m = hs.hotkey.modal.new({}, nil)
@@ -43,30 +16,46 @@ end
 
 hs.hotkey.bind({}, 'f19', pressed, released)
 
-m:bind({}, 'c', function() launch('Visual Studio Code') end)
-m:bind({}, 't', function() launch('iTerm') end)
-m:bind({}, 'h', function() launch('Mimestream') end)
-m:bind({}, 'n', function() launch('Brave Browser') end)
-m:bind({}, 's', function() launch('Slack') end)
-m:bind({}, 'e', function() m:exit() end)
+m:bind({}, 'h', function() am.switchToAndFromApp('com.microsoft.VSCode') end)
+m:bind({}, 't', function() am.switchToAndFromApp('com.brave.Browser') end)
+m:bind({}, 'n', function() am.switchToAndFromApp('com.googlecode.iterm2') end)
+m:bind({}, 's', function() am.switchToAndFromApp('com.tinyspeck.slackmacgap') end)
+m:bind({}, 'w', function() am.switchToAndFromApp('com.mimestream.Mimestream') end)
+
+-- show the bundleid of the currently open window
+m:bind({}, 'b', function()
+  local bundleId = hs.window.focusedWindow():application():bundleID()
+  hs.alert.show(bundleId)
+  hs.pasteboard.setContents(bundleId)
+end)
+
 m:bind({}, 'escape', function() m:exit() end)
 m:bind({}, 'fn', function() m:exit() end)
 
 function m:entered() menu:setTitle("⚫") end
-function m:exited()  menu:setTitle("")  end
+function m:exited()  menu:setTitle("") end
+
+hs.hotkey.bind(hyper, "i", function() am.switchToAndFromApp('com.microsoft.VSCode') end)
+hs.hotkey.bind(hyper, "e", function() am.switchToAndFromApp('com.brave.Browser') end)
+hs.hotkey.bind(hyper, "o", function() am.switchToAndFromApp('com.googlecode.iterm2') end)
+hs.hotkey.bind(hyper, "a", function() am.switchToAndFromApp('com.tinyspeck.slackmacgap') end)
+hs.hotkey.bind(hyper, "k", function() am.switchToAndFromApp('com.mimestream.Mimestream') end)
+
+-- hs.hints.style = 'vimperator'
+-- hs.hints.showTitleTesh = 0
+hs.hints.hintChars = {"A","O","E","I","H","T","N","S","C","."}
+hs.hints.fontName = "MonoLisa"
+hs.hotkey.bind(hyper, ".", function() hs.hints.windowHints(hs.window.focusedWindow():application():allWindows()) end)
+hs.hotkey.bind(hyper, 'x', hs.reload)
 
 -- If in vscode send delete line key code, otherwise send below.
 -- SEND_STRING(SS_LCTRL("d")SS_LSFT(SS_LCTRL("a")SS_TAP(X_LEFT))SS_TAP(X_BSPC));
-hs.hotkey.bind({'alt'}, 's', function()
+local del_line = function()
   local front = hs.application.frontmostApplication()
-  if front and front:name() == "Code" then
-    hs.eventtap.event.newKeyEvent(hs.keycodes.map.ctrl, true):post()
-    hs.eventtap.event.newKeyEvent(hs.keycodes.map.shift, true):post()
-    hs.eventtap.event.newKeyEvent('k', true):post()
-    hs.eventtap.event.newKeyEvent('k', false):post()
-    hs.eventtap.event.newKeyEvent(hs.keycodes.map.ctrl, false):post()
-    hs.eventtap.event.newKeyEvent(hs.keycodes.map.shift, false):post()
-  elseif front and front:name() == "iTerm2" then
+  if front and front:bundleID() == 'com.microsoft.VSCode' then
+    hs.eventtap.keyStroke({'ctrl', 'shift'}, 'k')
+  elseif front and front:bundleID() == 'com.googlecode.iterm2' then
+    -- faster than calling keyStroke twice
     hs.eventtap.event.newKeyEvent(hs.keycodes.map.ctrl, true):post()
     hs.eventtap.event.newKeyEvent('a', true):post()
     hs.eventtap.event.newKeyEvent('a', false):post()
@@ -87,54 +76,10 @@ hs.hotkey.bind({'alt'}, 's', function()
     hs.eventtap.event.newKeyEvent('Left', false):post()
     hs.eventtap.event.newKeyEvent(hs.keycodes.map.shift, false):post()
 
-    hs.eventtap.event.newKeyEvent(hs.keycodes.map.delete, true):post()
-    hs.eventtap.event.newKeyEvent(hs.keycodes.map.delete, false):post()
-  end
-end)
-
-
-function changeVolume(diff)
-  return function()
-    local current = hs.audiodevice.defaultOutputDevice():volume()
-    local new = math.min(100, math.max(0, math.floor(current + diff)))
-    if new > 0 then
-      hs.audiodevice.defaultOutputDevice():setMuted(false)
-    end
-    hs.alert.closeAll(0.0)
-    hs.alert.show("Volume " .. new .. "%", {}, 0.5)
-    hs.audiodevice.defaultOutputDevice():setVolume(new)
+    hs.eventtap.keyStroke(nil, 'delete')
   end
 end
 
-local function sendSystemKey(key)
-  hs.eventtap.event.newSystemKeyEvent(key, true):setFlags({'alt', 'shift'}):post()
-  hs.eventtap.event.newSystemKeyEvent(key, false):setFlags({'alt', 'shift'}):post()
-end
-
-local volume = {
-  up   = function() sendSystemKey("SOUND_UP") end,
-  down = function()
-    hs.eventtap.event.newSystemKeyEvent('SOUND_DOWN', true):setFlags({"alt", "shift"}):post()
-    hs.eventtap.event.newSystemKeyEvent('SOUND_DOWN', false):setFlags({"alt", "shift"}):post()
-  end,
-  mute = function() sendSystemKey("MUTE") end,
-}
-
--- hs.hotkey.bind({}, "f10", volume.mute)
-hs.hotkey.bind({}, "f8", volume.down, nil, volume.down)
-hs.hotkey.bind({}, "f9", volume.up, nil, volume.up)
-
-hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Down', volume.down)
-hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Up', changeVolume(3))
-
-
-function changeBrightness(diff)
-  return function()
-    local current = hs.brightness.get()
-    local new = math.min(100, math.max(0, math.floor(current + diff)))
-    hs.brightness.set(new)
-  end
-end
-
-hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Left', changeBrightness(-3), nil, changeBrightness(-3))
-hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'Right', changeBrightness(3), nil, changeBrightness(3))
+hs.hotkey.bind(nil, 'f19', del_line)
+hs.hotkey.bind({'alt'}, 's', del_line)
+hs.hotkey.bind({'alt'}, 'w', function() hs.eventtap.keyStroke({'option'}, 'delete') end)

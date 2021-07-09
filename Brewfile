@@ -53,6 +53,7 @@ cask 'multi'
 cask 'hammerspoon'
 cask 'obsidian'
 cask 'sublime-text'
+cask 'kindle'
 
 # fonts
 tap 'homebrew/cask-fonts'

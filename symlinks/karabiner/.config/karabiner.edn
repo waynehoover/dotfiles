@@ -26,19 +26,22 @@
     :rules [ :apple [:caps_lock :delete_or_backspace] ]
   }
 
-  {:des "fn to hyper"
-    :rules [ :apple [:fn :f19] ]
+  {:des "right-cmd to hyper"
+    :rules [ :apple
+      [:right_command :!CTOleft_shift]
+    ]
+  }
+
+  {:des "hyper-l to f19 (del line in hyper)"
+    :rules [ :apple
+      [:!!m :f19]
+    ]
   }
 
   {:des "Shift -> () or Shift"
     :rules [ :apple
       [:##left_shift :left_shift nil {:alone :!S9}]
       [:##right_shift :right_shift nil {:alone :!S0}]
-  ]}
-
-  {:des "cmd space -> cmd return"
-    :rules [ :apple
-      [:!Cspacebar :!Creturn_or_enter]
   ]}
 
   {:des "ctrl cmd c -> ctrl p then q"
@@ -69,6 +72,11 @@
     [[:m :comma] [:!QEleft_arrow]]
     [[:comma :period] [:!QEright_arrow]]
   ]}
+
+  ;; {:des "cmd space -> cmd return"
+  ;;   :rules [ :apple
+  ;;     [:!Cspacebar :!Creturn_or_enter]
+  ;; ]}
 
   ;; {:des "[q j] -> ; [j k] -> :"
   ;;  :rules [ :apple

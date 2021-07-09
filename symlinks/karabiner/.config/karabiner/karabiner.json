@@ -45,10 +45,31 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "fn to hyper",
+        "description" : "right-cmd to hyper",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "fn"
+            "key_code" : "right_command"
+          },
+          "to" : [ {
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "hyper-l to f19 (del line in hyper)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
           },
           "to" : [ {
             "key_code" : "f19"
@@ -97,27 +118,6 @@
           },
           "to" : [ {
             "key_code" : "right_shift"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "cmd space -> cmd return",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "return_or_enter",
-            "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
             "identifiers" : [ {
